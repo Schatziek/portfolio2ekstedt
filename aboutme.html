@@ -9,55 +9,16 @@
 </head>
 <body>
 
-<header class="site-header">
-        <div class="wrapper site-header__wrapper">
-            <div class="icons-wrapper">
+  <div id="header"></div>
 
-                <a href="index.html"><img src="eden.png" alt="artwork icon" class="icon"></a>
-
-                    <img src="orangestar.png" alt="Drawing of an orange star" class="icon stars">
-                    <img src="lightbluestar.png" alt="Drawing of a light blue star" class="icon stars">
-                    <img src="darkbluestar.png" alt="Drawing of a dark blue star" class="icon stars">
-                    <img src="blackstar.png" alt="Drawing of a black star" class="icon stars">
-                
-            </div>
-
-            <div class="header-menu">
-              <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="aboutme.html" class="active-tab">About me</a></li>
-                <li><a href="artgallery.html">Art gallery</a></li>
-                <li><a href="projects.html">Projects</a></li>
-              </ul>
-            </div>
-
-            <div class="off-screen-menu">
-              <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="artgallery.html">Art gallery</a></li>
-                <li><a href="aboutme.html" >About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-              </ul>
-
-              <div class="off-stars">
-                <img src="orangestar.png" alt="Drawing of a orange star" class="icon">
-                <img src="lightbluestar.png" alt="Drawing of a light blue star" class="icon">
-                <img src="darkbluestar.png" alt="Drawing of a dark blue star" class="icon">
-              </div>
-            </div>
-            
-            
-            <nav class="nav-ham-menu">
-              <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </nav>
-        </div>
-      </header>
+  <script> 
+    // for header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+    </script>
 
       <script src="menu.js"></script>
 
